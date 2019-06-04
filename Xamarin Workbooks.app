@@ -34,11 +34,11 @@ function myFunction() {
     
   <div class="topnav-right">
    
-     <a  href="home.html">Home</a>
-  <a href="about_us.html">Why RASOI</a>
-  <a class="active"  href="menu.html">Meal Plans</a>
-       <a  href="contact_us.html">Contact Us</a>
-                         <a  href="membership.html">Join Us</a>
+     <a  href="home.php">Home</a>
+  <a href="about_us.php">Why RASOI</a>
+  <a class="active"  href="menu.php">Meal Plans</a>
+       <a  href="contact_us.php">Contact Us</a>
+                         <a  href="membership.php">Join Us</a>
 
             <button  class="open-button" onclick="openForm()" class="blink"><span>ORDER NOW</span></button>
        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -46,15 +46,36 @@ function myFunction() {
   </a>
   </div>
     </div>
-  <div class="form-popup" id="myForm">
- <?php  include_once("order.php");
-    ?>
-</div>
+    <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Order Here</h1>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    
+    <label for="address"><b>address</b></label>
+    <input type="text" placeholder="Enter address" name="address" required>
+    
+    <label for="phone"><b>Phone</b></label>
+    <input type="text" placeholder="Enter Phone" name="phone" required>
+  
+    <label for="meal"><b>Meal Plan Name</b></label>
+    <input type="text" placeholder="Enter Meal Plan Name " name="name" require>
+
+      
+   
+
+  
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
 </div>
 
    <div class="wrapper">
-    <div id="content-wrap" style="height:440px!important;">
-
+   <div id="content-wrap">
 
     <div class="container" > 
         <div class="col-md-12" style="text-align: center; color:#4CAF50;">
@@ -126,9 +147,9 @@ function myFunction() {
             
             
         </div>
-        <!--<div class="col-md-12" style="text-align: center; color:#4CAF50;">
+        <div class="col-md-12" style="text-align: center; color:#4CAF50;">
             <button  class="open-button" onclick="openForm()" class="blink"><span>ORDER NOW</span></button>
-</div>-->
+</div>
 
         </div>
 </div>

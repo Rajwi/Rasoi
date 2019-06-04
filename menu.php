@@ -34,11 +34,11 @@ function myFunction() {
     
   <div class="topnav-right">
    
-     <a  href="home.html">Home</a>
-  <a href="about_us.html">Why RASOI</a>
-  <a class="active"  href="menu.html">Meal Plans</a>
-       <a  href="contact_us.html">Contact Us</a>
-                         <a  href="membership.html">Join Us</a>
+     <a  href="home.php">Home</a>
+  <a href="about_us.php">Why RASOI</a>
+  <a class="active"  href="menu.php">Meal Plans</a>
+       <a  href="contact_us.php">Contact Us</a>
+                         <a  href="membership.php">Join Us</a>
 
             <button  class="open-button" onclick="openForm()" class="blink"><span>ORDER NOW</span></button>
        <a href="javascript:void(0);" class="icon" onclick="myFunction()">

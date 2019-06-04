@@ -1,0 +1,168 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rasoi-Join us</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=""></script>
+  
+    
+</head>
+   
+<body>
+<div class="Container">
+<div class="topnav" id="myTopnav">
+
+                 <img   id="img1" src= "images/LOGO.png" s/>
+  
+ 
+  <div class="topnav-right">
+   
+     <a  href="home.html">Home</a>
+  <a href="about_us.html">Why RASOI</a>
+  <a href="menu.html">Meal Plans</a>
+       <a  href="contact_us.html">Contact Us</a>
+             <a class="active" href="membership.html">Join Us</a>
+
+         <button  class="open-button" onclick="openForm()" class="blink"><span>ORDER NOW</span></button>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  
+</div>
+</div>
+  <div class="form-popup" id="myForm">
+ <?php  include_once("order.php");
+    ?>
+</div>
+    
+    <div id="content-wrap" style="height:440px !important;">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+           <div class="col-md-6" >
+               <img src="images/m1.jpg" style="height:160px">
+               <H3>Want To JOIN US  ?</H2>
+                  <p>JUST FOLLOW SOME SIMPLE STEPS THAT MENTION BELOW</P>
+               <li>Just click on the link given below
+               </li>
+           <li> 
+               <a href="images/meber_form.pages" download><i class="fa fa-download"></i>membership form
+  
+</a></li>
+
+               <li>Download the form.</li>
+               <li>Fill up all the details that required to become a member of our business.</li>
+               <li>Send the form to our EMAIL address.</li>
+               <li>EMAIL:-  info@rasoi.com</li>
+               
+            
+            
+            </div>
+        </div>
+  
+</div>
+     
+     <footer >
+         <div class="row" id="footer">
+        
+            <div  class="col-sm-4">
+                <h3>SOCIALIZE</h3>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-snapchat-ghost"></a>
+
+
+         </div>
+            
+            
+   <div  class="col-sm-4" id="c">
+                    <h3>CONTACT US</h3>
+             G.T ROAD NEAR JAIL ROAD<br>
+             GURADSPUR<br>
+             <a href="tel:5551234567">PHONE: (+91)9780114575</a><br>
+        <a href = "mailto:rasoi@info.com?">
+
+            EMAIL:RASOI@INFO.COM</a>
+        
+      <p>RASOI © 2019. All rights reserved.</p>
+         
+         </div>
+         <div  class="col-sm-4">
+             
+         
+         </div>
+         </div>
+         
+        </footer>
+    
+    </div>
+
+     <script>
+    
+
+var slideIndex = 0;
+carousel(); 
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 2000); 
+}
+          
+          
+          
+        function autoResizeDiv()
+        {
+            document.getElementById('main').style.height = window.innerHeight +'px';
+        }
+        window.onresize = autoResizeDiv;
+        autoResizeDiv();
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+         
+// When the user clicks on div, open the popup
+
+</script>
+    <script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+    
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+    </body>
+</html>

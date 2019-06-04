@@ -1,28 +1,21 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Rasoi-Contact Us</title>
+<title>RASOI</title>
 <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src=""></script>
+    <script src="script.js"></script>
+
+  
   
     
 </head>
-<?php
-
-session_start();
-if(!empty($_SESSION)){
-    echo $_SESSION["message"];
-    session_unset();
-}
-?>
-   
 <body>
+  
 <div class="Container">
 <div class="topnav" id="myTopnav">
 
@@ -31,54 +24,44 @@ if(!empty($_SESSION)){
  
   <div class="topnav-right">
    
-     <a  href="home.html">Home</a>
-  <a href="about_us.html">Why RASOI</a>
-  <a href="menu.html">Meal Plans</a>
-       <a class="active" href="contact_us.html">Contact Us</a>
-                   <a  href="membership.html">Join Us</a>
+     <a class="active" href="home.php">Home</a>
+  <a href="about_us.php">Why RASOI</a>
+  <a href="menu.php">Meal Plans</a>
+       <a  href="contact_us.php">Contact Us</a>
+                         <a  href="membership.php">Join Us</a>
 
-         <button  class="open-button" onclick="openForm()" class="blink"><span>ORDER NOW</span></button>
+            <button  class="open-button" onclick="openForm()" class="blink"><span>ORDER NOW</span></button>
+
+
+ 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
-  
 </div>
-</div>
-  <div class="form-popup" id="myForm">
+
+
+   
+
+<div class="form-popup" id="myForm">
  <?php  include_once("order.php");
     ?>
 </div>
-    <div id="content-wrap" style="height:440px!important;">
-        <div class="row">
-            <div class="col-sm-7">
-  <form id="contact" action="contact.php" method="post">
-    <h3>Contact Us</h3>
-    <h4>Send a query , and get reply with in 24 hours!</h4>
-    <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1"  name="name" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" name="email" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Phone Number" type="tel" tabindex="3" name="phone" required>
-    </fieldset>
-   
-    <fieldset>
-      <textarea placeholder="Type your Message Here...." tabindex="5"  name="message" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-  </form>
-            </div>
-            <div class="col-sm-5" id="cont-img">
-                 <img src="images/images.png" height:150px !important, width:100px/>
-
-            </div>
-        </div>
-  
+    </div>
 </div>
+    
+<div class="wrapper" style="padding-top:38px;">
+    <div id="content-wrap" style="height:440px!important;">
+
+    <div class="w3-content">
+    
+     <img  class="mySlides" src="images/slider3.jpg" alert="img1">
+
+
+
+     <img class="mySlides" src="images/slider1.jpg" alert="img1">
+     <img class="mySlides" src="images/slider2.jpg" alert="img1">
+    </div>
+    </div>
      
      <footer >
          <div class="row" id="footer">
@@ -112,10 +95,10 @@ if(!empty($_SESSION)){
          </div>
          
         </footer>
-    </div>
     
-
-     <script>
+    
+    
+ <script>
     
 
 var slideIndex = 0;
@@ -163,16 +146,7 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 </script>
+    </div>
     
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
     </body>
 </html>

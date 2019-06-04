@@ -3,83 +3,111 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Rasoi-Contact Us</title>
+<title>Rasoi-about us</title>
 <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src=""></script>
+    <script src="">
+    
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
   
     
 </head>
-<?php
-
-session_start();
-if(!empty($_SESSION)){
-    echo $_SESSION["message"];
-    session_unset();
-}
-?>
    
 <body>
 <div class="Container">
 <div class="topnav" id="myTopnav">
 
+
                  <img   id="img1" src= "images/LOGO.png" s/>
   
- 
+    
   <div class="topnav-right">
    
-     <a  href="home.html">Home</a>
-  <a href="about_us.html">Why RASOI</a>
-  <a href="menu.html">Meal Plans</a>
-       <a class="active" href="contact_us.html">Contact Us</a>
-                   <a  href="membership.html">Join Us</a>
+     <a  href="home.php">Home</a>
+  <a class="active" href="about_us.php">Why RASOI</a>
+  <a href="menu.php">Meal Plans</a>
+       <a  href="contact_us.php">Contact Us</a>
+       <a  href="membership.php">Join Us</a>
 
-         <button  class="open-button" onclick="openForm()" class="blink"><span>ORDER NOW</span></button>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <button  class="open-button" onclick="openForm()" class="blink"><span>ORDER NOW</span></button>
+       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
-  
-</div>
-</div>
-  <div class="form-popup" id="myForm">
+  </div>
+    </div>
+
+   <div class="form-popup" id="myForm">
  <?php  include_once("order.php");
     ?>
 </div>
+</div>
+<div class="wrapper">
     <div id="content-wrap" style="height:440px!important;">
-        <div class="row">
-            <div class="col-sm-7">
-  <form id="contact" action="contact.php" method="post">
-    <h3>Contact Us</h3>
-    <h4>Send a query , and get reply with in 24 hours!</h4>
-    <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1"  name="name" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" name="email" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Phone Number" type="tel" tabindex="3" name="phone" required>
-    </fieldset>
-   
-    <fieldset>
-      <textarea placeholder="Type your Message Here...." tabindex="5"  name="message" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-  </form>
-            </div>
-            <div class="col-sm-5" id="cont-img">
-                 <img src="images/images.png" height:150px !important, width:100px/>
 
+    <div class="crow" > 
+        <div class="col-md-12" style="text-align: center; color:#4CAF50;">
+        <h2> Why RASOI ?</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2" >
+                
+                <img src="images/1.png" alt="png image" height=100px!important/>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="heading">Home Made food</h3><p>
+                 We provide you delicious and tasty home made food with minimal oil and less masala .
+                </p>
+                
+   
+            </div>
+            
+            
+            
+            
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2" >
+                
+                <img src="images/2.png" alt="png image" height=100px!important/>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="heading">Amazing Variety</h3><p>
+With taste, we provide you variety in food so that you can't get bored.No dish is repeated in two weeks             </p>
+                
+   
             </div>
         </div>
-  
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2" >
+                
+                <img src="images/3.png" alt="png image" height=100px!important/>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="heading">Easy To Order</h3><p>
+Want to order your meal with us .  Just one phone call away. :)                </p>
+                
+   
+            </div>
+        </div>
 </div>
-     
+</div>
      <footer >
          <div class="row" id="footer">
         
@@ -93,7 +121,7 @@ if(!empty($_SESSION)){
          </div>
             
             
-   <div  class="col-sm-4" id="c">
+  <div  class="col-sm-4" id="c">
                     <h3>CONTACT US</h3>
              G.T ROAD NEAR JAIL ROAD<br>
              GURADSPUR<br>
@@ -114,8 +142,7 @@ if(!empty($_SESSION)){
         </footer>
     </div>
     
-
-     <script>
+ <script>
     
 
 var slideIndex = 0;
@@ -164,15 +191,7 @@ function closeForm() {
 }
 </script>
     
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+    
+</div>
     </body>
 </html>

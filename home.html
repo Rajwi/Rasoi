@@ -28,6 +28,8 @@
   <a href="about_us.html">Why RASOI</a>
   <a href="menu.html">Meal Plans</a>
        <a  href="contact_us.html">Contact Us</a>
+                         <a  href="membership.html">Join Us</a>
+
             <button  class="open-button" onclick="openForm()" class="blink"><span>ORDER NOW</span></button>
 
 
@@ -36,37 +38,20 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
-</div>
+
 
    
 
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Order Here</h1>
-
-    <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="Enter name" name="name" required>
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-    
-    <label for="address"><b>address</b></label>
-    <input type="text" placeholder="Enter address" name="address" required>
-    
-    <label for="phone"><b>Phone</b></label>
-    <input type="text" placeholder="Enter Phone" name="phone" required>
-  
-    <label for="meal"><b>Meal Plan Name</b></label>
-    <input type="text" placeholder="Enter Meal Plan Name " name="name" require>
-
-      
-   
-
-  
-
-    <button type="submit" class="btn">Submit</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+ <?php  include_once("order.php");
+    ?>
 </div>
+    </div>
+</div>
+    
+<div class="wrapper" style="padding-top:38px;">
+    <div id="content-wrap" style="height:400px!important;">
+
     <div class="w3-content">
     
      <img  class="mySlides" src="images/slider3.jpg" alert="img1">
@@ -75,6 +60,7 @@
 
      <img class="mySlides" src="images/slider1.jpg" alert="img1">
      <img class="mySlides" src="images/slider2.jpg" alert="img1">
+    </div>
     </div>
      
      <footer >
@@ -111,7 +97,7 @@
         </footer>
     
     
-    </div>
+    
  <script>
     
 
@@ -160,7 +146,7 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 </script>
-    
+    </div>
     
     </body>
 </html>
